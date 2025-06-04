@@ -1,0 +1,257 @@
+/* Menu
+----------------------------------------------- */
+
+#menu {
+    background: #000F22; /* fundo do menu */
+    color: #FFF; /* cor da fonte do menu */
+    height: 50px; 
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+#menu-left {
+    float: left;
+    width: 100%;
+    max-width: 700px;
+}
+
+#menu-right {
+    float: right;
+    width: 100%;
+    max-width: 300px;
+    text-align: right;
+}
+
+#menu ul, #menu li {
+    text-transform: uppercase;  /* Todas as fontes maiúsculas, se não quiser, apague esta linha */
+    margin: 0 auto;
+    padding: 0 0;
+    list-style: none;
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+    font-weight: 700;
+}
+
+#menu a {
+    display: block;
+    line-height: 50px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#menu li a:hover {
+    color: #fffFFF;  /* Cor do link no hover */
+    background: #50A267;  /* Fundo do link no hover */
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+#menu-left input {
+    display: none;
+    margin: 0 0;
+    padding: 0 0;
+    width: 80px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#menu label {
+    background: url("http://i.imgur.com/Cx8HQMd.png") center no-repeat;
+    -moz-background-size: auto 50%;
+    -webkit-background-size: auto 50%;
+    background-size: auto 50%;
+    display: none;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#menu ul.menus {
+    padding-top: 5px;
+    height: auto;
+    overflow: hidden;
+    width: 200px;
+    background: rgba(255,255,255,0.95);
+    position: absolute;
+    z-index: 99;
+    display: none;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+}
+
+#menu ul.menus li {
+    display: block;
+    width: 100%;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+#menu ul.menus a {
+    color: #000; 
+    line-height: 35px;
+}
+
+#menu li:hover ul.menus {
+    display: block;
+}
+
+#menu ul.menus a:hover {
+    background: #5d8d59;  /* Fundo dos link das subabas no hover */
+    color: #fff;  /* Cor dos link das subabas no hover */
+    padding-left: 20px;
+}
+
+#search {
+    margin-top: 0px;
+    color: #fff !important;
+}
+#search input[type="text"] {
+    background: url("http://i.imgur.com/WsHNC7P.png") no-repeat 20px 15px;
+    border: none;
+    color: #fff !important;
+    font-size: 13px;
+    width: 0px;
+    height: 38px;
+    padding: 6px 5px 6px 50px;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    cursor: pointer;
+}
+#search input[type="text"]:focus {
+    color: #fff !important;
+    width: 245px;
+    background: url("http://i.imgur.com/WsHNC7P.png") no-repeat  20px 15px rgba(0,0,0,0.2);
+    outline: none;
+    cursor: text;
+}
+
+centro {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Menu Responsivo
+----------------------------------------------- */
+
+@media screen and (max-width: 1000px){
+
+.menunope {
+    display: none;
+}
+
+#menu {
+    position: fixed;
+}
+
+#menu ul {
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    height: 1000px;
+    display: none
+}
+
+#menu ul.menus {
+    width: 100%;
+    position: static;
+    padding-left: 20px;
+}
+
+#menu li {
+    display: block;
+    float: none;
+    width: auto;
+    font-weight: 700;
+    background: #0e0e0e;
+}
+
+#menu-left input, #menu label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#menu-left input {
+    z-index:4;
+}
+
+#menu-left input:checked + label {
+    background: url("http://i.imgur.com/yNRYwBD.png") no-repeat center;
+    -moz-background-size: auto 50%;
+    -webkit-background-size: auto 50%;
+    background-size: auto 50%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#menu-left input:checked ~ ul {
+    display:block;
+}
+
+#menu ul.menus {
+    width: 100%;
+    background: #111;
+    z-index: 99;
+    display: none;
+    box-shadow: 0 0 1px rgba(0,0,0,0.2);
+    margin-top: -5px;
+    margin-left: -20px;
+    padding-top: 0;
+    border:none;
+}
+
+#menu ul.menus li {
+    display: block;
+    width: 100%;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-shadow: none;
+    background: rgba(0,0,0,0.5);
+}
+
+#menu ul.menus a {
+    color: #ccc; 
+    line-height: 35px;
+}
+
+#menu li:hover ul.menus {
+    display: block;
+}
+
+#menu ul.menus a:hover {
+    background: #5d8d59;  /* Fundo do link das subabas no hover */
+    color: #fff;  /* Cor do link das subabas no hover */
+    padding-left: 20px;
+}
+
+}
+----------------------------------------------- */

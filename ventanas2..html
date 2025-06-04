@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Página</title>
+  <link rel="stylesheet" href="panelSuperior.css" />
+  <link rel="stylesheet" href="ventanas2.css" />
+</head>
+<body>
+
+  <nav id="menu">
+    <div class="menu-container">
+      <div id="menu-left">
+        <input type="checkbox" id="toggle-menu" />
+        <label for="toggle-menu" class="toggle-label"></label>
+        <ul>
+          <li><a href="ventana1.html">Início</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li>
+            <a href="#">Categorias</a>
+            <ul class="menus">
+              <li><a href="ventana1.html">HTML e CSS</a></li>
+              <li><a href="#">PhotoShop</a></li>
+              <li><a href="#">Freebies</a></li>
+              <li><a href="#">Efeitos</a></li>
+              <li><a href="#">Menus</a></li>
+              <li><a href="#">Tutoriais</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div id="menu-right">
+        <form action="/search" id="search" method="get">
+          <input
+            autocomplete="off"
+            name="q"
+            placeholder="Escreva qualquer coisa e dê enter"
+            type="text"
+          />
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="formato1">
+    <h2>Envía 3 parámetros</h2>
+    <form action="enviar.php" method="post">
+      <label for="param1">Parámetro 1:</label>
+      <input type="text" id="param1" name="param1" required>
+
+      <label for="param2">Parámetro 2:</label>
+      <input type="text" id="param2" name="param2" required>
+
+      <label for="param3">Parámetro 3:</label>
+      <input type="text" id="param3" name="param3" required>
+
+      <button type="submit">Enviar datos</button>
+    </form>
+  </nav>
+
+  <div class="dashboard">
+    <div class="calories">
+      <h3>Diego Xavier Barros Conde</h3>
+      <h4>Datos del estudiante:</h4>
+      <div><strong>Edad:</strong> 23 años</div>
+      <div><strong>Ciudad:</strong> Machala</div>
+      <div><strong>Carrera:</strong> Tecnologías de la información</div>
+    </div>
+    <div class="calories">
+      <h3>Henrry Sthyve Morocho Rojas</h3>
+      <h4>Datos del estudiante:</h4>
+      <div><strong>Edad:</strong> 23 años</div>
+      <div><strong>Ciudad:</strong> Machala</div>
+      <div><strong>Carrera:</strong> Tecnologías de la información</div>
+    </div>
+  </div>
+
+</body>
+</html>
